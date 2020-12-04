@@ -1,0 +1,12 @@
+div .content-alarm {
+    border-right: 4px solid red;
+}
+div .content-mytask {
+    border-right: 4px solid green;
+}
+div .content-requests {
+    border-right: 4px solid blue;
+}
+ui.cards > .card, .ui.card {
+    min-width: 345px;
+}

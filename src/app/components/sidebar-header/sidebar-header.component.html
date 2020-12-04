@@ -1,0 +1,26 @@
+<div class="sidebar-header">
+  <ul style="float: right;padding: 20px;">
+      <li class="mr-2">پیام ها</li>
+      <li class="msg" >{{count}}</li>
+  </ul>
+  <ul style="float: left;padding: 20px;">
+      <li>قدیمی ترین ها</li>
+  </ul>
+  <!-- <app-sidebar-header></app-sidebar-header> -->
+</div>
+<mat-form-field appearance="fill" style="text-align: right;width: 100%;">
+  <mat-label>همه پیام ها</mat-label>
+  <mat-select (ngModelChange)="CatId($event)"  [(ngModel)]="selectedValue">
+    <mat-option
+     [ngClass]="{'msg-type-mytask':message.title === 'Task',
+                 'msg-type-alarms':message.title === 'Notification',
+                 'msg-type-request':message.title === 'Request'
+              }"
+                
+      *ngFor="let message of messageType, let i= index" [value]="message.id"
+      >
+      {{message.displayTitle}}
+      <span class="count-message" ><h5>{{CatCount[i]}}</h5></span>
+    </mat-option>
+  </mat-select>
+</mat-form-field>

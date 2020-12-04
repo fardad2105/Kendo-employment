@@ -1,0 +1,13 @@
+.navbar-nav h4 {
+    color: white;
+    border-left: 1px solid gainsboro;
+    padding-left: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}

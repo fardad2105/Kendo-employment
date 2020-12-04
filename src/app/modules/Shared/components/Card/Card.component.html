@@ -1,0 +1,27 @@
+<div class="ui card" [style.display]="!showData ? 'block' : 'none'">
+    <div class="ui raised segment" *appTimes="10">
+      <div class="ui placeholder">
+        <div class="header">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="paragraph">
+          <div class="medium line"></div>
+          <div class="short line"></div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="ui card" *ngFor="let message of messages">
+    <div class="content" [ngClass]="{'content-alarm': message.messageCategoryID === 2,
+                                      'content-mytask': message.messageCategoryID === 1,
+                                      'content-requests': message.messageCategoryID === 3}">                       
+          <div class="right aligned header"><a [routerLink]="['/MainContent/main-home']" routerLinkActive="router-link-active"  (click)="getDataItem(message.messageID)" >{{message.jobTitle}}</a></div>
+          <div class="right aligned description">
+            <p class="float-right">{{message.messageTitle}}</p>
+            <p class="float-left">{{message.sentTime}}</p>
+          </div>
+    </div>
+  </div>
+

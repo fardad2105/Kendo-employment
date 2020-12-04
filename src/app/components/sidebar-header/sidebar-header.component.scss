@@ -1,0 +1,49 @@
+mat-option.msg-type-mytask {
+    text-align: right;
+    border-right: 4px solid rgb(0, 119, 255);
+}
+mat-option.msg-type-alarms {
+    text-align: right;
+    border-right: 4px solid red;
+}
+mat-option.msg-type-request {
+    text-align: right;
+    border-right: 4px solid rgb(30, 255, 0);
+}
+
+span.count-message {
+    float: left;
+    margin: auto;
+    margin: 0 auto;
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+    margin-top: 2%;
+}
+.sidebar {
+    position: fixed;
+    overflow: scroll;
+    height: 100%;
+}
+div.sidebar-header {
+    height: 65px;
+    background-color: white;
+    border: none;
+    /* border-radius: 0.28571429rem; */
+    box-shadow: 0px 1px 3px 0px #D4D4D5, 0px 0px 0px 1px #D4D4D5;
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+}
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}
+
+li.msg {
+    background-color: rgb(248, 134, 134);
+    border-radius: 50%;
+    padding: 5px;
+}
