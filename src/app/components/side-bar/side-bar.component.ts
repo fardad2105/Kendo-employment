@@ -34,7 +34,9 @@ export class SideBarComponent implements OnInit, OnChanges {
       map(data => data.filter(val => val.messageCategoryID === this.catID))
     );
 
-    filterCats.subscribe(data => this.message = data);
+    filterCats.subscribe(data => this.dataTranserService.addToCategory(data));
+
+    console.log('Cat Id: ' + this.catID);
   }
 
 }

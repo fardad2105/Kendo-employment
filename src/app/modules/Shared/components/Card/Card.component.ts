@@ -28,17 +28,21 @@ export class CardComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
-    if (!this.messages == null)
+    if (!this.messageValues == null)
     {
       this.showData = true;
     }
     else {
       this.showData = false;
     }
+
+    this.dataTranserService.msgChange$.subscribe( data => {
+      this.messageValues = data;
+    });
   }
 
   getDataItem(messageID: number): void {
-    this.dataService.GetContent(messageID).subscribe( data => {
+      this.dataService.GetContent(messageID).subscribe( data => {
       this.dataTranserService.addToInventory(data);
     });
   }
